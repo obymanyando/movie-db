@@ -15,7 +15,6 @@ const SearchMovies = () => {
 			const res = await fetch(url)
 			const data = await res.json()
 			setMovies(data.results)
-			console.log(movies)
 		} catch (err) {
 			console.log(err)
 		}
@@ -23,13 +22,6 @@ const SearchMovies = () => {
 
 	const handleInput = (e) => {
 		setQuery(e.target.value)
-
-		// if (e.target.value === '') {
-		// 	// throw Error('Oi oi')
-		// 	alert('Plese enter something')
-		// } else {
-		// 	setQuery(e.target.value)
-		// }
 	}
 
 	return (
@@ -45,11 +37,16 @@ const SearchMovies = () => {
 					onChange={handleInput}
 					required={true}
 				/>
-				<Button type='submit' variant='success'>
-					Search
-				</Button>
+				<div>
+					<Button type='submit' variant='success' className='mr-2'>
+						Search
+					</Button>
+					<Button href='/' variant='secondary'>
+						Go back
+					</Button>
+				</div>
 			</form>
-			{<SearchResults movies={movies} key={movies.key} />}
+			<SearchResults movies={movies} key={movies.key} />
 		</div>
 	)
 }
