@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import DisplayMovies from './DisplayMovies'
+import SearchResults from './SearchResults'
+import { Button } from 'react-bootstrap'
 
-const SearchMovie = () => {
+const SearchMovies = () => {
 	const [query, setQuery] = useState('')
 	const [movies, setMovies] = useState([])
 
@@ -22,32 +23,35 @@ const SearchMovie = () => {
 
 	const handleInput = (e) => {
 		setQuery(e.target.value)
-		console.log(query)
+
+		// if (e.target.value === '') {
+		// 	// throw Error('Oi oi')
+		// 	alert('Plese enter something')
+		// } else {
+		// 	setQuery(e.target.value)
+		// }
 	}
 
 	return (
 		<div>
 			<form className='form' onSubmit={fetchMovies}>
-				<label htmlFor='query' className='label'>
-					Movie Name
-				</label>
+				<label htmlFor='query'>Search Movies</label>
 				<input
 					type='text'
 					name='query'
 					className='input'
-					placeholder='i.e. Iron Man'
+					placeholder='Example: Super Man'
 					value={query}
 					onChange={handleInput}
+					required={true}
 				/>
-				<button type='submit' className='btn'>
+				<Button type='submit' variant='success'>
 					Search
-				</button>
+				</Button>
 			</form>
-			{movies.map((movie) => {
-				return <DisplayMovies movie={movie} />
-			})}
+			{<SearchResults movies={movies} key={movies.key} />}
 		</div>
 	)
 }
 
-export default SearchMovie
+export default SearchMovies
