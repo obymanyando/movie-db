@@ -1,5 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+button {
+    --btn_display:inline-block;
+    --btn_padding: 0.35em 1.5em;
+    --btn_border:0.1em solid #FFFFFF;
+    --btn_margin:0 0.3em 0.3em 0;
+    --btn_border-radius:0.12em;
+    --btn_background-color:#FFFFFF;
+    --btn_box-sizing: border-box;
+    --btn_text-decoration:none;
+    --btn_color:#000000;
+    --btn_text-align:center;
+    --btn_transition: all 0.2s;
+}
+
 .App {
-    /* width: 100%; */
     background-color: black;
 }
 .title {
@@ -26,8 +43,37 @@ form label {
     color: #fff;
 }
 
+button{
+    padding: var(--btn_padding);
+    border: var(--btn_border);
+    margin: var(--btn_margin);
+    background-color: var(--btn_background-color);
+    color: var(--btn_color);
+    border-radius: var(--btn_border-radius);
+    text-decoration: var(--btn_text-decoration);
+    transition: var(--btn_transition);
+}
+
+#back-button{
+    padding: 0.18em 1em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    background-color:#FFFFFF;
+    box-sizing: border-box;
+    text-decoration:none;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+.search-button:hover, #back-button:hover{
+    color:#FFFFFF;
+    background-color:#000000;
+}
+
 .popular-title {
-    color: #fff;
+    color: #ffffff;
     font-size: 2.0rem;
     text-align: center;
     margin: 2rem;
@@ -39,19 +85,23 @@ form label {
     justify-content: center;
     /* align-content: space-around; */
     flex-wrap: wrap;
+    margin: 20px;
 }
 
 .box {
     width: auto;
     margin-left:20px;
+    margin-top: 20px;
 }
 
 .content {
-    /* width: auto; */
     color: white;
     margin-top:5px;
 }
 
+h6 {
+    /* font-size: 18px; */
+}
 .overview {
     /* display: flex;
     flex-wrap: wrap; */

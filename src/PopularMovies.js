@@ -22,7 +22,7 @@ const PopularMovies = ({ popularMovies }) => {
 								<h6>{movie.title}</h6>
 								<p>Released: {movie.release_date}</p>
 								<p>RATING: {movie.vote_average}</p>
-								<div className='overview'>{/* <p>{movie.overview}</p> */}</div>
+								{/* <div className='overview'><p>{movie.overview}</p></div> */}
 							</div>
 						</div>
 					)

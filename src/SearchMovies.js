@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import SearchResults from './SearchResults'
 import { Button } from 'react-bootstrap'
+import SearchResults from './SearchResults'
 
 const SearchMovies = () => {
 	const [query, setQuery] = useState('')
@@ -38,10 +38,10 @@ const SearchMovies = () => {
 					required={true}
 				/>
 				<div>
-					<Button type='submit' variant='success' className='mr-2'>
+					<button type='submit' className='search-button'>
 						Search
-					</Button>
-					<Button href='/' variant='secondary'>
+					</button>
+					<Button href='/' id='back-button'>
 						Go back
 					</Button>
 				</div>

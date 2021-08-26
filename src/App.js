@@ -1,6 +1,6 @@
+import React from 'react'
 import './App.css'
 import SearchMovies from './SearchMovies'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { useEffect, useState } from 'react'
 
 import PopularMovies from './PopularMovies'
