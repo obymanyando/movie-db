@@ -1,7 +1,6 @@
 import './App.css'
 import SearchMovies from './SearchMovies'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Container } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 
 import PopularMovies from './PopularMovies'
@@ -27,11 +26,9 @@ const App = () => {
 
 	return (
 		<div className='App'>
-			<Container>
-				<h1 className='title'>Huha Movie DB</h1>
-				<SearchMovies />
-				<PopularMovies popularMovies={popularMovies} key={popularMovies.id} />
-			</Container>
+			<h2 className='title'>{`Oby's Movie DB`.toUpperCase()}</h2>
+			<SearchMovies />
+			<PopularMovies popularMovies={popularMovies} key={popularMovies.id} />
 		</div>
 	)
 }
