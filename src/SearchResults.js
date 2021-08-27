@@ -23,7 +23,12 @@ const SearchMovies = ({ movies }) => {
 								<h6>{movie.title}</h6>
 								<p>Released: {movie.release_date}</p>
 								<p>RATING: {movie.vote_average}</p>
-								{/* <div className='overview'><p>{movie.overview}</p></div> */}
+								<div className='overview'>
+									<br />
+
+									<p>Overview:</p>
+									<p>{movie.overview}</p>
+								</div>
 							</div>
 						</div>
 					)

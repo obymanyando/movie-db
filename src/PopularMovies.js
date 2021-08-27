@@ -24,6 +24,7 @@ const PopularMovies = ({ popularMovies }) => {
 								<p>RATING: {movie.vote_average}</p>
 								<div className='overview'>
 									<br />
+
 									<p>Overview:</p>
 									<p>{movie.overview}</p>
 								</div>
