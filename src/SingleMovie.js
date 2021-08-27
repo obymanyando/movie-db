@@ -8,6 +8,7 @@ const SingleMovie = ({ popularMovies }) => {
 		<div className='full-card'>
 			<Container className='d-flex flex-column align-items-center w-50'>
 				{popularMovies
+					// eslint-disable-next-line
 					.filter((movie) => movie.id == id)
 
 					.map((movie) => (
@@ -43,16 +44,3 @@ const SingleMovie = ({ popularMovies }) => {
 }
 
 export default SingleMovie
-
-{
-	/* <Card className='d-flex flex-column h-100 w-50 m-3' key={movie.id}>
-							<Card.Body className='d-flex flex-column align-items-center'>
-								<p>Welcome</p>
-								<div className='d-flex flex-column mb-4'>
-									<Card.Img>{movie.poster}</Card.Img>
-									<Card.Title>{movie.title}</Card.Title>
-									<Card.Text>{movie.release_date}</Card.Text>
-								</div>
-							</Card.Body>
-						</Card> */
-}
