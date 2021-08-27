@@ -1,9 +1,11 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css'
 import SearchMovies from './SearchMovies'
 import { useEffect, useState } from 'react'
-
-import PopularMovies from './PopularMovies'
+// import NavBar from './Nav'
+import SingleMovie from './SingleMovie'
+import Home from './Home'
 
 const App = () => {
 	const [popularMovies, setPopularMovies] = useState([])
@@ -25,11 +27,25 @@ const App = () => {
 	}, [])
 
 	return (
-		<div className='App'>
-			<h2 className='title'>{`Oby's Movie DB`.toUpperCase()}</h2>
-			<SearchMovies />
-			<PopularMovies popularMovies={popularMovies} key={popularMovies.id} />
-		</div>
+		<Router>
+			<div className='App'>
+				{/* <NavBar /> */}
+				<h2 className='title'>
+					<a href='/'>{`Oby's Movie DB`.toUpperCase()}</a>
+				</h2>
+
+				<SearchMovies />
+				{/* <PopularMovies popularMovies={popularMovies} key={popularMovies.id} /> */}
+				<Switch>
+					<Route exact path='/'>
+						<Home popularMovies={popularMovies} />
+					</Route>
+					<Route exact path='/popularMovies/:id'>
+						<SingleMovie popularMovies={popularMovies} />
+					</Route>
+				</Switch>
+			</div>
+		</Router>
 	)
 }
 

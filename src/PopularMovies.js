@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 // import SearchMovies from './SearchResults'
 
 const PopularMovies = ({ popularMovies }) => {
@@ -27,6 +28,13 @@ const PopularMovies = ({ popularMovies }) => {
 
 									<p>Overview:</p>
 									<p>{movie.overview}</p>
+								</div>
+								<div className='d-flex flex-column mt-2'>
+									<Link to={`/popularMovies/${movie.id}`} className='more-info'>
+										<button>
+											<a href=''>More info</a>{' '}
+										</button>
+									</Link>
 								</div>
 							</div>
 						</div>

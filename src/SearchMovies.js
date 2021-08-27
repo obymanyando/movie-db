@@ -38,7 +38,7 @@ const SearchMovies = () => {
 					required={true}
 				/>
 				<div>
-					<button type='submit' className='search-button'>
+					<button type='submit' id='search-button'>
 						Search
 					</button>
 					<Button href='/' id='back-button'>
