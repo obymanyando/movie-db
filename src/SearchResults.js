@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card } from 'react-bootstrap'
-import { Container, Row, Col } from 'react-bootstrap'
+// import { Card } from 'react-bootstrap'
+// import { Container, Row, Col } from 'react-bootstrap'
 
 const SearchMovies = ({ movies }) => {
 	return (
@@ -12,7 +12,7 @@ const SearchMovies = ({ movies }) => {
 			<div className='movie-list'>
 				{movies.map((movie) => {
 					return (
-						<div className='box' key={movie.id}>
+						<div className='card' key={movie.id}>
 							<div className='poster'>
 								<img
 									src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`}
